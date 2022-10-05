@@ -6,12 +6,12 @@ const Product = ({product}) => {
         <div>
          <div className="card bg-gray-300 shadow border border-zinc-200">
   <figure><img src={img} alt="Shoes" /></figure>
-  <div className="card-body">
+  <div className="m-2">
     <h2 className="card-title">Shoes!</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions">
-      <button className="btn btn-primary w-full bottom-0">Buy Now</button>
-    </div>
+ 
+      <button className="btn bg-[#276964] w-full">Buy Now</button>
+
   </div>
 </div>
 
