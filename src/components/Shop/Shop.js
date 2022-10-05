@@ -29,8 +29,8 @@ const handleAddToCart = (product) => {
 
 
     return (
-        <div className='grid grid-cols-5'>
-           <div className="col-span-5 sm:col-span-5 md:col-span-4  lg:col-span-4 pt-6">
+        <div className='grid grid-cols-5 sm:grid-cols-5 md:grid-cols-3 lg:grid-cols-5 '>
+           <div className="col-span-5 sm:col-span-5 md:col-span-3  lg:col-span-4 pt-6">
 
           <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-2'>
           {
@@ -43,7 +43,7 @@ const handleAddToCart = (product) => {
 
 
 
-           <div className="col-span-5 sm:col-span-5 md:col-span-1 bg-gray-800 text-white">
+           <div className="col-span-5 sm:col-span-5 md:col-span-1 lg:col-span-1 bg-gray-800 text-white">
             <Cart cart={cart}> </Cart>
             
              </div>
