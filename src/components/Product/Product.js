@@ -3,11 +3,13 @@ import React from 'react';
 const Product = ({product}) => {
   const {name, price, img, seller, ratings} = product;
     return (
-         <div className="rounded-lg shadow-md border h-[510px] relative">
+         <div className="rounded-lg shadow-md border h-[510px] relative bg-slate-300">
  
   <div>
 
-  <img className='mx-auto mt-3 rounded w-[286px] h-[286px]' src={img} alt="Shoes" />
+  <img className='mx-auto mt-3 rounded w-[286px] h-[286px]' src={img} alt="Product" onError={event => {
+          event.target.src = "https://i.ibb.co/kDjDBcn/no-image-found.jpg"
+          event.onerror = null }}/>
 
    <div className='px-4 mt-4'>
    <h2 className="font-bold text-lg"> {name} </h2>
@@ -17,7 +19,9 @@ const Product = ({product}) => {
    </div>
  
  
-     <button className="absolute bottom-0 btn border-0 bg-[#276964] w-[50%] md:w-full hover:bg-[#3e99b4] hover:text-black">Add To Cart</button>
+    
+    <button className="mx-auto absolute bottom-0 btn border-0 bg-[#276964] w-[50%] md:w-full hover:bg-[#3e99b4] hover:text-black">Add To Cart</button>
+
 
  
   </div>
