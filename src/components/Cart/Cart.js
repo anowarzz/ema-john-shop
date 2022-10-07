@@ -20,7 +20,7 @@ const tax = parseFloat((total * 0.1).toFixed(2));
 const grandTotal = total + shipping + tax ;
 
     return (
-        <div className='md:sticky top-6'>
+        <div className='sm:sticky top-6'>
             <h3 className='text-3xl font-semibold text-center mt-6'>Order Summary</h3>
             <p className='mt-3 pl-5'>Selected Items: {quantity}</p>
             <p className='mt-3 pl-5'>Total Price : ${total} </p>
