@@ -5,9 +5,11 @@ const Cart = ({cart}) => {
 
 let total = 0;
 let shipping = 0;
+let quantity = 0;
 
 for(const product of cart){
-    total = total + product.price;
+    quantity = quantity + product.quantity;
+    total = total + product.price * product.quantity;
     shipping = shipping + product.shipping;
 
 }
@@ -20,7 +22,7 @@ const grandTotal = total + shipping + tax ;
     return (
         <div className='md:sticky top-6'>
             <h3 className='text-3xl font-semibold text-center mt-6'>Order Summary</h3>
-            <p className='mt-3 pl-5'>Selected Items: {cart.length}</p>
+            <p className='mt-3 pl-5'>Selected Items: {quantity}</p>
             <p className='mt-3 pl-5'>Total Price : ${total} </p>
             <p className='mt-3 pl-5'>Total Shipping : ${shipping} </p>
             <p className='mt-3 pl-5'>Tax : ${tax} </p>
