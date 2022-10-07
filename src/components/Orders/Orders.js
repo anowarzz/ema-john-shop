@@ -27,7 +27,7 @@ const Orders = () => {
 
 
       <div className="col-span-5 sm:col-span-5 md:col-span-1 lg:col-span-1 mx-auto
-      md:mr-6  bg-[#276964] text-white mt-12 border-t-8 border-rose-600 lg:py-8 lg:px-4 rounded-md">
+      md:mr-6  bg-[#276964] text-white mt-12 border-t-8 border-rose-600 lg:py-8 lg:px-4 rounded-md mb-8">
         <Cart cart={cart}> </Cart>
       </div>
     </div>

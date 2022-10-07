@@ -63,7 +63,7 @@ const Shop = () => {
         </div>
       </div>
 
-      <div className="col-span-5 sm:col-span-2 md:col-span-1 lg:col-span-1  bg-[#276964] text-white">
+      <div className="col-span-5 sm:col-span-2 md:col-span-1 lg:col-span-1  bg-[#276964] text-white mt-12 sm:mt-0">
         <Cart cart={cart}> </Cart>
       </div>
     </div>
