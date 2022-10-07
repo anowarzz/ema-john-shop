@@ -37,7 +37,7 @@ const Shop = () => {
 
     const exists = cart.find((product) => product.id === selectedProduct.id);
 
-    if (!exist) {
+    if (!exists) {
       selectedProduct.quantity = 1;
 
       newCart = [...cart, selectedProduct];
@@ -47,6 +47,7 @@ const Shop = () => {
         const rest = cart.filter(product => product.id !== selectedProduct.id);
 
         exists.quantity = exists.quantity + 1;
+        newCart = [...rest, exists]
     }
     setCart(newCart);
     addToDb(selectedProduct.id);
