@@ -1,6 +1,8 @@
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
-const Cart = ({cart}) => {
+const Cart = ({cart, clearCart}) => {
 
 
 let total = 0;
@@ -27,6 +29,12 @@ const grandTotal = total + shipping + tax ;
             <p className='mt-3 pl-5'>Total Shipping : ${shipping} </p>
             <p className='mt-3 pl-5'>Tax : ${tax} </p>
             <h5 className='mt-3 pl-5 text-2xl font-semibold mb-4 pr-3'>Grand Total : ${grandTotal.toFixed(2)}</h5>
+
+            <div className='mt-10 text-center'>
+                <button onClick={() => clearCart()} className='btn btn-warning'>
+                    Clear Cart <FontAwesomeIcon icon={faTrashCan} className="pl-4 text-lg"/>
+                </button>
+            </div>
         </div>
     );
 };
