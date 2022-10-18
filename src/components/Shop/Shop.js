@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { addToDb, deleteShoppingCart, getStoredCart } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
@@ -70,7 +70,11 @@ deleteShoppingCart();
       </div>
 
       <div className="col-span-5 sm:col-span-2 md:col-span-1 lg:col-span-1  bg-[#276964] text-white mt-12 sm:mt-0">
-        <Cart cart={cart} clearCart ={clearCart}> </Cart>
+        <Cart cart={cart} clearCart ={clearCart}>
+          <Link to = '/orders'>
+            <button className="btn bg-blue-600 mt-2 hover:bg-blue-700"> Review Orders</button>
+              </Link>
+           </Cart>
       </div>
     </div>
   );

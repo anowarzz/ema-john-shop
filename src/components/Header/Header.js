@@ -11,13 +11,13 @@ const Header = () => {
         </a>
 
         <div className='text-white flex gap-4 font-semibold flex-wrap'>
-            <Link className='hover:bg-amber-500 px-2 py-1 rounded-lg' to='/'>Shop</Link>
+            <Link className='hover:bg-[#c50beb] px-2 py-1 rounded-lg' to='/'>Shop</Link>
 
-            <Link className='hover:bg-amber-500 px-2 py-1 rounded-lg' to='/orders'>Orders</Link>
+            <Link className='hover:bg-[#c50beb] px-2 py-1 rounded-lg' to='/orders'>Orders</Link>
 
-            <Link className='hover:bg-amber-500 px-2 py-1 rounded-lg' to ='/inventory'>Inventory</Link>
+            <Link className='hover:bg-[#c50beb]  px-2 py-1 rounded-lg' to ='/inventory'>Inventory</Link> 
 
-            <Link className='hover:bg-amber-500 px-2 py-1 rounded-lg' to='/about'>About</Link>
+            <Link className='hover:bg-[#c50beb] px-2 py-1 rounded-lg' to='/about'>About</Link>
         </div>
 
         </div>

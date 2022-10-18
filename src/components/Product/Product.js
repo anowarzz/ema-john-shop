@@ -28,7 +28,7 @@ const Product = (props) => {
    </div>
  
  
- <button onClick={()=>handleAddToCart(product)} className="absolute bottom-0 btn border-0 bg-[#276964] w-full hover:bg-[#3e99b4] hover:text-black">
+ <button onClick={()=>handleAddToCart(product)} className="absolute bottom-0 btn border-0 bg-[#c50beb] w-full hover:bg-[#09bbf1d5] hover:text-black">
     <p className='pr-2'>Add To Cart</p>
     <FontAwesomeIcon icon={faCartShopping} />
     </button>
