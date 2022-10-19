@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -26,11 +27,11 @@ const Login = () => {
         </div>
 
     <div className="text-center">
-    <input className="border-0 hover:bg-[#026af1be] btn bg-[#c50beb] mt-8 w-96 hover:text-black" type="submit" value="Login" />
+    <input className="border-0 hover:bg-[#026af1be] btn bg-[#c50beb] mt-8 w-[90%] hover:text-black" type="submit" value="Login" />
     </div>
-
-
       </form>
+
+<p className="pt-4 text-center ">New to Ema-John ?  <Link className="font-semibold text-base text-blue-700"  to = '/signup'> Create A New Account</Link>  </p>
     </div>
   );
 };

@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/UserContext';
 import logo from '../../images/Logo.svg'
 
 const Header = () => {
+
+
+const {user} = useContext(AuthContext)
+
+
+
+
     return (
         <div className='bg-[#1C2B35] flex justify-between px-16 py-6 items-center flex-wrap'>
 
@@ -23,6 +31,7 @@ const Header = () => {
             <Link className='hover:bg-[#c50beb] px-2 py-1 rounded-lg' to='/signup'>Sign Up</Link>
 
             <Link className='hover:bg-[#c50beb] px-2 py-1 rounded-lg' to='/about'>About Us</Link>
+            <span>{user?.email}</span>
         </div>
 
         </div>
