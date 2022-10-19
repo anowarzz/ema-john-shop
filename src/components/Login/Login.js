@@ -15,9 +15,9 @@ const Login = () => {
         Email
     </label>
     <input type="email" name="email" id="" className="text-center w-[90%] mx-auto py-2 input input-bordered" required/>
-
-
         </div>
+
+
         <div className="form-control mt-4">
     <label htmlFor="password" className="pl-8 pb-2 text-lg text-[#2A414F]">
         Password
@@ -25,6 +25,9 @@ const Login = () => {
     <input type="password" name="password" id="" className="text-center w-[90%] mx-auto py-2 input input-bordered" required/>
         </div>
 
+    <div className="text-center">
+    <input className="border-0 hover:bg-[#026af1be] btn bg-[#c50beb] mt-8 w-96 hover:text-black" type="submit" value="Login" />
+    </div>
 
 
       </form>
