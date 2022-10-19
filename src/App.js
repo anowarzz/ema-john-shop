@@ -7,6 +7,8 @@ import Inventory from "./components/Inventory/Inventory"
 import Main from "./layouts/Main";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import { ProductsAndCardLoader } from "./loaders/ProductsAndCartLoader";
+import Login from "./components/Login/Login";
+import SignUp from "./components/SignUp/SignUp";
 
 function App() {
   const router = createBrowserRouter([
@@ -29,7 +31,15 @@ function App() {
           path: '/inventory',
           element: <Inventory />
         },
-        { path: 'about', element: <About /> }
+        { path: 'about', element: <About /> },
+        {
+          path:'/login',
+          element: <Login /> 
+        },
+        {
+          path:'/signup',
+          element: <SignUp /> 
+        }
       ],
     },
 

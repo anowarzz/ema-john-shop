@@ -17,7 +17,12 @@ const Header = () => {
 
             <Link className='hover:bg-[#c50beb]  px-2 py-1 rounded-lg' to ='/inventory'>Inventory</Link> 
 
-            <Link className='hover:bg-[#c50beb] px-2 py-1 rounded-lg' to='/about'>About</Link>
+
+            <Link className='hover:bg-[#c50beb] px-2 py-1 rounded-lg' to='/login'>Log In</Link>
+
+            <Link className='hover:bg-[#c50beb] px-2 py-1 rounded-lg' to='/signup'>Sign Up</Link>
+
+            <Link className='hover:bg-[#c50beb] px-2 py-1 rounded-lg' to='/about'>About Us</Link>
         </div>
 
         </div>
