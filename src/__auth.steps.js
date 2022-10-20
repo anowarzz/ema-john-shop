@@ -28,3 +28,34 @@
  7. getAuth in the user Context.
 
 */
+
+
+/*
+
+Firebase Hosting 
+------------------
+// One time for every computer .
+
+1. npm install -g firebase-tools
+
+2. firebase login 
+*/
+
+// For each project one time
+
+/*
+3. firebase init 
+
+Make sure : for public directory : you select build
+
+Single Page application : y
+
+*/
+
+
+// For every deploy 
+
+/*
+1. npm run build
+2. firebase deploy
+*/

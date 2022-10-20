@@ -48,7 +48,7 @@ const Orders = () => {
       >
         <Cart cart={cart} clearCart={clearCart}>
           <Link
-            className="btn bg-blue-700 mt-2 hover:bg-blue-900"
+            className="btn bg-[#c50beb] mt-2 hover:bg-blue-700"
             to="/shipping"
           >
             Proceed Shipping
