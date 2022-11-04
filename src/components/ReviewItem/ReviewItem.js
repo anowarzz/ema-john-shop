@@ -4,7 +4,7 @@ import {faTrashCan} from '@fortawesome/free-solid-svg-icons';
 
 
 const ReviewItem = ({ product,handleRemoveItem}) => {
-  const { name, price, quantity, img, shipping, id } = product;
+  const { name, price, quantity, img, shipping, _id } = product;
 
   return (
     <div className="flex items-center justify-center border-blue-400 border my-3   shadow-inner rounded">
@@ -25,7 +25,7 @@ const ReviewItem = ({ product,handleRemoveItem}) => {
 
         {/* Delete button */}
         <div className="mx-4">
-          <button onClick={() => handleRemoveItem(id)} className="btn btn-error rounded-full hover:bg-[#f10707fb]"> <FontAwesomeIcon icon={faTrashCan} className="text-xl"/></button>
+          <button onClick={() => handleRemoveItem(_id)} className="btn btn-error rounded-full hover:bg-[#f10707fb]"> <FontAwesomeIcon icon={faTrashCan} className="text-xl"/></button>
         </div>
       </div>
    
