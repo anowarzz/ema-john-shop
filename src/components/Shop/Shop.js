@@ -6,10 +6,9 @@ import Product from "../Product/Product";
 
 
 /* ----> Pagination Calculation ----> 
-1. Total Count
-2. Per Page Data
-3. Page Number
-
+1. Total Count : loaded
+2. Per Page Data size :  10
+3. 4. Current Page (Page)
 */
 
 
@@ -18,9 +17,18 @@ import Product from "../Product/Product";
 
 
 const Shop = () => {
-  const products = useLoaderData() ;
+  const {products, count} = useLoaderData() ;
 
-  const [cart, setCart] = useState([]);
+const [cart, setCart] = useState([]);
+
+const [page , setPage] = useState(0);
+const [size, setSize] = useState(10)
+
+const pages = Math.ceil(count / size)
+
+
+
+
 
 const clearCart = () => {
 setCart([]);
@@ -69,7 +77,8 @@ deleteShoppingCart();
   };
 
   return (
-    <div className="grid grid-cols-5 sm:grid-cols-5 md:grid-cols-3 lg:grid-cols-5 ">
+    <div>
+      <div className="grid grid-cols-5 sm:grid-cols-5 md:grid-cols-3 lg:grid-cols-5 ">
       <div className="col-span-5 sm:col-span-3 md:col-span-2  lg:col-span-4 pt-6">
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-2">
           {products.map((product) => (
@@ -89,7 +98,23 @@ deleteShoppingCart();
               </Link>
            </Cart>
       </div>
+      
     </div>
+    <div>
+    <div className="text-center">
+      <p className="font-semibold">Currently Selected Page : {page}</p>
+        {
+          [...Array(pages).keys()].map(number=> <button className="btn m-2 "
+          key={number} 
+          onClick = {() => setPage(number)}
+          >
+            {number}
+          </button>)
+        }
+      </div>
+    </div>
+    </div>
+    
   );
 };
 
